@@ -1,0 +1,154 @@
+<DOCTYPE! html>
+<html lang="pt-br">  
+<head>
+    <meta charset="UTF-8" name="viewport">
+    <title> Gustavo na UFRJ </title>
+    <link rel="stylesheet" href="jogo(gustavo_na_ufrj).css">
+</head>
+
+<body>
+    <header class="cabeca">
+    </header>
+
+
+    <main>
+
+        <div class="background"> 
+        </div>
+
+        <div class="titulo">
+            <h3> Gustavo na UFRJ </h3>
+        </div>
+
+        <div class="texto">
+            <p id="texto"> </p>
+
+        </div>
+
+        <div class="escolhas">
+            <button class="botao1" id="btn1"></button>
+            <button class="botao2" id="btn2"></button> 
+        </div>
+
+
+    </main>
+
+<script>
+    
+    var texto = document.querySelector ("#texto");
+    var botao1 = document.querySelector ("#btn1");
+    var botao2 = document.querySelector ("#btn2");
+
+function primeirafase () {
+    texto.textContent = "Gustavo é um estudante de Nanotecnologia da UFRJ. Ele divide seu tempo entre as aulas e as atividades de iniciação científica no IMA (Instituto de Macromoléculas). É uma bela quarta-feira de sol e Gustavo precisa da sua ajuda para escolher uma camisa. Escolha:";
+    botao1.innerText = "Camisa rosa";
+    botao2.innerText = "Camisa azul";
+    botao1.onclick = segundafase1;
+    botao2.onclick = segundafase2;
+    
+}
+
+function segundafase1() {
+    
+    texto.textContent = "Muito bem, player! Você é sensatx e sabe que às quartas usamos rosa. Agora você está chegando na UFRJ e deve decidir entre assistir uma aula de cálculo ou ir para o IMA fazer coisas do laboratório:";
+    botao1.innerText = "Ir para a aula";
+    botao2.innerText = "Ir para o laboratório";
+    botao1.onclick = aula;
+    botao2.onclick = ima;
+    document.write (`<br> <img src= "file:///C:/Users/USUARIO/Downloads/gus_rosa.jpeg" alt = "Gustop de rosa" height = "300" width = "200">`)
+    
+}
+
+function segundafase2(){
+    texto.textContent = "Beesha, não faça a sonsa pois você sabe que às quartas usamos rosa. Mas tudo bem, você não vai perder o jogo por isso... por enquanto. Agora você está chegando na UFRJ e deve decidir entre assistir uma aula de cálculo ou ir para o IMA fazer coisas do laboratório:"
+    botao1.innerText = "Ir para a aula";
+    botao2.innerText = "Ir para o laboratório";
+    botao1.onclick  = aula;
+    botao2.onclick = ima;
+}
+function aula(){
+    texto.textContent = "Você não consegue se concentrar com o sotaque russo do seu professor e acaba perdendo a manhã inteira! Mais sorte da próxima vez"
+    botao1.innerText = "Volte para o início";   
+    botao2.innerText = "Sério, você tem que voltar pro início"    
+    botao1.onclick  = primeirafase;
+    botao2.onclick = primeirafase;
+    
+}
+function ima(){
+    texto.textContent = "Ele faz suas obrigações e para para almoçar perto do meio dia. A professora Maria Inês o vê e fala: “Gustavo, venha cá”. Ele:"
+    botao1.innerText = "Decide que o almoço pode esperar e vai";    
+    botao2.innerText = "Pede que a professora segure uma horinha pois ele está com muita fome";
+    botao1.onclick = atendeu;
+    botao2.onclick = nao_atendeu;
+}
+function atendeu(){
+    texto.textContent = "Gustavo morreu de fome. Game over."
+    botao1.innerText = "Volte ao início";    
+    botao2.innerText = "Já diria Coldplay: I'm going back to the start";
+    botao1.onclick = primeirafase;
+    botao2.onclick = primeirafase;
+}
+
+function nao_atendeu(){
+    texto.textContent = "Gustavo chega no bandejão. As opções de comida são peixe e omelete. Qual delas Gustavo irá comer?"
+    botao1.innerText = "Peixe";
+    botao2.innerText = "Omelete";
+    botao1.onclick = peixe;
+    botao2.onclick = omelete;
+}
+
+function peixe(){
+    texto.textContent = "O peixe estava gostoso. Ele fica feliz e de bom humor para ajuda a professora até o fim do dia! Agora, Gustavo está fazendo seus experimentos. Seu amigo Lucas chega para lhe pedir ajuda. Ele decide:"
+    botao1.innerText = "Ajudar"; 
+    botao2.innerText = "Não ajudar";
+    botao1.onclick = ajudou;
+    botao2.onclick = nao_ajudou;
+   
+}
+
+function omelete(){
+    texto.textContent = "A moqueca estava ruim. Ele fica triste pois não almoçou bem mas segue o baile e volta ao IMA. Agora, Gustavo está fazendo seus experimentos. Seu amigo Lucas chega para lhe pedir ajuda. Ele decide:"
+    botao1.innerText = "Ajudar"; 
+    botao2.innerText = "Não ajudar";
+    botao1.onclick = ajudou;
+    botao2.onclick = nao_ajudou;
+}
+
+function ajudou(){
+    texto.textContent = "Gustavo se distrai ao ajudar Lucas e seu experimento explode! O dia parece estar arruinado mas Amanda, vendo seu desespero, chega e oferece ajuda. Eles recomeçam do zero e ela decide pipetar ácido na solução rapidamente. O Gustavo, transtornado com o dia agitado:"
+    botao1.innerText = "Deixa que Amanda faça do jeito que achar melhor"; 
+    botao2.innerText = "Pede que Amanda pipete o ácido lentamente";
+    botao1.onclick = rapido;
+    botao2.onclick = lento;
+}
+
+function nao_ajudou(){
+    texto.textContent = "Gustavo consegue focar em seu experimento, que lhe rende um Nobel. Parabéns, você venceu!"
+    botao1.innerText = "Jogar novamente"; 
+    botao2.innerText = " ";
+    botao1.onclick = primeirafase;
+    botao2.onclick = primeirafase;
+}
+
+function rapido (){
+    texto.textContent = "Gustavo é gado demais é perdeu novamente seu experimento. Ele sabia que a pipetagem deveria ser feita lentamente. O dia está arruinado!"
+    botao1.innerText = "Jogar novamente"; 
+    botao2.innerText = " ";
+    botao1.onclick = primeirafase;
+    botao2.onclick = primeirafase;
+}
+
+function lento (){
+    texto.textContent = "O experimento deu certo! Gustavo ganha um Nobel. Parabéns, você venceu!"
+    botao1.innerText = "Jogar novamente"; 
+    botao2.innerText = " ";
+    botao1.onclick = primeirafase;
+    botao2.onclick = primeirafase;
+}
+
+
+primeirafase();
+
+</script>
+</body>
+</html>
