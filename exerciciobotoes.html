@@ -1,19 +1,22 @@
 <DOCTYPE! html>
-
-<button id = "btn" class = "btn"> </button>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
 
 <script>
 
-var botao = document.querySelector("#btn");
+var body = document.querySelector('body');
 
-function gerabotao(){
-    for (i = 0; i < 20; i++){
-    botao.innerText = (i);
-}
-}
 
-gerabotao()
+    for (var i = 0; i < 20; i++){
+        body.innerHTML += `<button> Botão ${i} </button><br>`
+        
+
+    }
+
 
 </script>
+</body>
 
 <html>
