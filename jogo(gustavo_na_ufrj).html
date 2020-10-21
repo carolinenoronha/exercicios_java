@@ -2,7 +2,7 @@
 <html lang="pt-br">  
 <head>
     <meta charset="UTF-8" name="viewport">
-    <title> Gustavo na UFRJ </title>
+    <title> Gustavinho na UFRJ </title>
     <link rel="stylesheet" href="jogo(gustavo_na_ufrj).css">
 </head>
 
@@ -13,11 +13,8 @@
 
     <main>
 
-        <div class="background"> 
-        </div>
-
         <div class="titulo">
-            <h3> Gustavo na UFRJ </h3>
+            <h3> Gustavinho na UFRJ </h3>
         </div>
 
         <div class="texto">
@@ -30,6 +27,10 @@
             <button class="botao2" id="btn2"></button> 
         </div>
 
+        <div id = "imagens">
+            <img  id = "img" class = "foto" >
+        </div>
+
 
     </main>
 
@@ -38,6 +39,8 @@
     var texto = document.querySelector ("#texto");
     var botao1 = document.querySelector ("#btn1");
     var botao2 = document.querySelector ("#btn2");
+    var imagem = document.getElementById("imagens")
+   
 
 function primeirafase () {
     texto.textContent = "Gustavo é um estudante de Nanotecnologia da UFRJ. Ele divide seu tempo entre as aulas e as atividades de iniciação científica no IMA (Instituto de Macromoléculas). É uma bela quarta-feira de sol e Gustavo precisa da sua ajuda para escolher uma camisa. Escolha:";
@@ -45,7 +48,7 @@ function primeirafase () {
     botao2.innerText = "Camisa azul";
     botao1.onclick = segundafase1;
     botao2.onclick = segundafase2;
-    
+    imagem.innerHTML = `<img  id = "img" class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/gustop.jpeg">`
 }
 
 function segundafase1() {
@@ -55,8 +58,9 @@ function segundafase1() {
     botao2.innerText = "Ir para o laboratório";
     botao1.onclick = aula;
     botao2.onclick = ima;
-    document.write (`<br> <img src= "file:///C:/Users/USUARIO/Downloads/gus_rosa.jpeg" alt = "Gustop de rosa" height = "300" width = "200">`)
-    
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/gus_rosa.jpeg">` 
+
+     
 }
 
 function segundafase2(){
@@ -65,28 +69,35 @@ function segundafase2(){
     botao2.innerText = "Ir para o laboratório";
     botao1.onclick  = aula;
     botao2.onclick = ima;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/gus_azul.jpeg">`
+       
+     
 }
+
 function aula(){
     texto.textContent = "Você não consegue se concentrar com o sotaque russo do seu professor e acaba perdendo a manhã inteira! Mais sorte da próxima vez"
-    botao1.innerText = "Volte para o início";   
-    botao2.innerText = "Sério, você tem que voltar pro início"    
+    botao1.innerText = "Volte para o início";     
     botao1.onclick  = primeirafase;
-    botao2.onclick = primeirafase;
-    
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/impaciente.jpeg">`
+    botao2.remove()
 }
+
 function ima(){
     texto.textContent = "Ele faz suas obrigações e para para almoçar perto do meio dia. A professora Maria Inês o vê e fala: “Gustavo, venha cá”. Ele:"
     botao1.innerText = "Decide que o almoço pode esperar e vai";    
     botao2.innerText = "Pede que a professora segure uma horinha pois ele está com muita fome";
     botao1.onclick = atendeu;
     botao2.onclick = nao_atendeu;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/mibt.jpeg">` 
 }
+
 function atendeu(){
     texto.textContent = "Gustavo morreu de fome. Game over."
     botao1.innerText = "Volte ao início";    
-    botao2.innerText = "Já diria Coldplay: I'm going back to the start";
     botao1.onclick = primeirafase;
-    botao2.onclick = primeirafase;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/morto.jpg">`
+    botao2.remove()
+
 }
 
 function nao_atendeu(){
@@ -95,6 +106,7 @@ function nao_atendeu(){
     botao2.innerText = "Omelete";
     botao1.onclick = peixe;
     botao2.onclick = omelete;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/papando.jpeg">`
 }
 
 function peixe(){
@@ -103,15 +115,17 @@ function peixe(){
     botao2.innerText = "Não ajudar";
     botao1.onclick = ajudou;
     botao2.onclick = nao_ajudou;
+    imagem.innerHTML = `<img class = "foto" width = "450" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/tienne.jpeg">`
    
 }
 
 function omelete(){
-    texto.textContent = "A moqueca estava ruim. Ele fica triste pois não almoçou bem mas segue o baile e volta ao IMA. Agora, Gustavo está fazendo seus experimentos. Seu amigo Lucas chega para lhe pedir ajuda. Ele decide:"
+    texto.textContent = "O omelete estava ruim. Ele fica triste pois não almoçou bem mas segue o baile e volta ao IMA. Agora, Gustavo está fazendo seus experimentos. Seu amigo Lucas chega para lhe pedir ajuda. Ele decide:"
     botao1.innerText = "Ajudar"; 
     botao2.innerText = "Não ajudar";
     botao1.onclick = ajudou;
     botao2.onclick = nao_ajudou;
+    imagem.innerHTML = `<img class = "foto" width = "450" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/tienne.jpeg">`
 }
 
 function ajudou(){
@@ -120,30 +134,32 @@ function ajudou(){
     botao2.innerText = "Pede que Amanda pipete o ácido lentamente";
     botao1.onclick = rapido;
     botao2.onclick = lento;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/amanda.jpg">`
 }
 
 function nao_ajudou(){
     texto.textContent = "Gustavo consegue focar em seu experimento, que lhe rende um Nobel. Parabéns, você venceu!"
     botao1.innerText = "Jogar novamente"; 
-    botao2.innerText = " ";
     botao1.onclick = primeirafase;
-    botao2.onclick = primeirafase;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/vc_ganhou.jpg">`
+    botao2.remove()
+        
 }
 
 function rapido (){
     texto.textContent = "Gustavo é gado demais é perdeu novamente seu experimento. Ele sabia que a pipetagem deveria ser feita lentamente. O dia está arruinado!"
     botao1.innerText = "Jogar novamente"; 
-    botao2.innerText = " ";
     botao1.onclick = primeirafase;
-    botao2.onclick = primeirafase;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/papoutriste.jpeg">`
+    botao2.remove()
 }
 
 function lento (){
     texto.textContent = "O experimento deu certo! Gustavo ganha um Nobel. Parabéns, você venceu!"
     botao1.innerText = "Jogar novamente"; 
-    botao2.innerText = " ";
     botao1.onclick = primeirafase;
-    botao2.onclick = primeirafase;
+    imagem.innerHTML = `<img class = "foto" width = "350" height = "400" alt = "gustop" src = "file:///C:/Users/USUARIO/Downloads/vc_ganhou.jpg">`
+    botao2.remove()
 }
 
 
