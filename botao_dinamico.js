@@ -1,4 +1,3 @@
-
 <script>
 
 var botao = document.createElement("button");
@@ -9,6 +8,8 @@ botao.onmouseenter = muda1;
 botao.onmousedown = muda2;
 botao.onmouseout = muda3;
 botao.onmouseup = muda4;
+
+
 
 function muda1(){
     botao.textContent = "Olá"
