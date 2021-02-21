@@ -1,4 +1,4 @@
-<script>
+//Exercício para praticar operações com  divisões, arredondamentos e restos
 
 function divlaranjas (numlaranjas, numvizinhos) {
     var resto = numlaranjas%numvizinhos
@@ -8,11 +8,5 @@ function divlaranjas (numlaranjas, numvizinhos) {
 
 }
 
-document.write(divlaranjas (80,38));
+ console.log(divlaranjas (80,38));
 
-
-
-
-
-
-</script>

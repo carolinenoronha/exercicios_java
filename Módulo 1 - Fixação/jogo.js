@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<lang = "pt-br"></lang>
-</html>
-
-
-<script>
-
+//Primeira versão do jogo situacional que virou o "Gustavinho na UFRJ"
+//Prática de condicionais, inputs em prompts e alerts
 
 
 function decisao1(resposta){
@@ -39,4 +33,3 @@ function decisao1(resposta){
 
 decisao1 ("resposta")
 
-</script>
