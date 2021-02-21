@@ -1,4 +1,3 @@
-<script>
 
 var botao = document.createElement("button");
 document.body.appendChild(botao);
@@ -27,4 +26,3 @@ function muda4(){
     botao.textContent = "Olá"
 }
 
-</script>
